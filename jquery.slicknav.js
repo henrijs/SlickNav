@@ -216,7 +216,7 @@
             if (!settings.showChildren){
                 $this._visibilityToggle(data.children, null, false, null, true);
                 if (settings.openClass && $(this).hasClass(settings.openClass)){
-                    $this._itemClick($('.slicknav_row', this));
+                    $this._itemClick($('> .slicknav_row', this));
                 }
             }
         });
