@@ -214,7 +214,9 @@
         $(items).each(function () {
             var data = $(this).data('menu');
             if (!settings.showChildren){
-                $this._visibilityToggle(data.children, null, false, null, true);
+                if (settings.openClass && !$(this).hasClass(settings.openClass)){
+                    $this._visibilityToggle(data.children, null, false, null, true);
+                }
             }
         });
 
